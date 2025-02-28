@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cebu City</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            text-align: center;
+            background-color: #d3c3c3;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #007bff;
+        }
+        .container {
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .contact-form {
+            background-color: #5c5555;
+            padding: 40px;
+            border-radius: 10px;
+            color: white;
+            max-width: 700px;
+            margin: auto;
+        }
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-top: 5px;
+            border-radius: 25px;
+            border: none;
+            background: #d3d3d3;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            height: 150px;
+            border-radius: 15px;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .social-icons div {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 180px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+        }
+        .social-icons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .facebook-btn { background: #1877f2; color: white; }
+        .instagram-btn { background: #e1306c; color: white; }
+        .twitter-btn { background: #1da1f2; color: white; }
+    </style>
+    <script>
+        function clearForm() {
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Event.html">Event</a>
+        <a href="Tourist.html">Tourist</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <label for="phone">Cell no.:</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" required>
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Enter your message" required></textarea>
+            <button type="button" class="submit-btn" onclick="clearForm()">Submit</button>
+        </form>
+        <div class="social-icons">
+            <div>
+                <img src="facebook.png" alt="Facebook">
+                <a href="https://www.facebook.com/cebucitygovph" target="_blank"><button class="facebook-btn">Facebook</button></a>
+            </div>
+            <div>
+                <img src="social.png" alt="Instagram">
+                <a href="https://www.instagram.com/accounts/login/?next=%2Fcebuisland%2F&source=omni_redirect" target="_blank"><button class="instagram-btn">Instagram</button></a>
+            </div>
+            <div>
+                <img src="twitter.png" alt="Twitter">
+                <a href="https://x.com/cebudailynews?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><button class="twitter-btn">Twitter</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
